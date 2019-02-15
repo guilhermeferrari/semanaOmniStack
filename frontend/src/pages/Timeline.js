@@ -13,11 +13,10 @@ export default class Timeline extends Component {
 		newTweet: ""
 	};
 
-	async componentDidMountl() {
+	async componentDidMount() {
 		this.subscribeToEvents();
 
 		const response = await api.get("tweets");
-
 		this.setState({ tweets: response.data });
 	}
 
